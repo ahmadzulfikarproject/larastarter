@@ -45,7 +45,7 @@
             </div>
             <ul class="header-menu nav">
                 <li class="dropdown nav-item">
-                    <a href="{{ route('welcome') }}" class="nav-link">
+                    <a href="{{ route('home') }}" class="nav-link" target="_blank">
                         <i class="nav-link-icon pe-7s-shuffle"></i>
                         Visit Site
                     </a>

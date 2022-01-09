@@ -10,6 +10,8 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Spatie\Permission\Traits\HasRoles;
 
 class LoginController extends Controller
 {
@@ -57,6 +59,11 @@ class LoginController extends Controller
         ]);
         // Show greetings.
         notify()->success("Hey $user->name, Welcome Back!",'Success');
+        // if ($user->hasRole('admin')) {
+        //     return redirect()->route('dasboard');
+        // }
+
+        // return redirect()->route('home');
     }
 
     /**
